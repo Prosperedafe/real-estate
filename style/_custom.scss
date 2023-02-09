@@ -1,0 +1,104 @@
+//fonts url
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap');
+
+//default styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//end of default styles
+
+//font sizes
+$tiny : .8rem;
+$small : .9rem;
+$regular : 1rem;
+$big : 1.5rem;
+$semi-large : 2rem;
+//////
+
+//font weights 
+$font-weights: (
+    "thin": 300,
+    "normal": 400,
+    "big": 500,
+    "semibold": 600,
+    "bold": 700,
+    "heavy": 800
+);
+
+//colors
+$base-color : hsl(202, 100%, 56%);
+$main-white : hsl(0, 0%, 100%);
+$linear-yellow : hsl(26, 99%, 71%);
+$linear-purple : hsl(273, 80%, 65%);
+$base-yellow : hsl(35, 100%, 51%);
+$button-border: hsl(0, 100%, 99%, 0.35);
+$apartment-bg: hsl(0, 0%, 9%);
+//end of colors
+$flex-wrap: wrap;
+$basis-400: 350px;
+$flex-grow-1: 1;
+$padding-x : clamp(1rem, 6vw, 15rem);
+// mixins
+
+@mixin linearGradient {
+    background: linear-gradient(90deg, $linear-yellow 0%, $linear-purple 100%);
+    box-shadow: 0px 17px 33px hsla(0, 0%, 100%, 0.2);
+    border-radius: 8px;
+    font-size: $regular;
+    font-weight: map-get($font-weights , big);
+    color: $main-white;
+    border: none;
+    padding: .6rem 1rem;
+    cursor: pointer;
+}
+
+@mixin blue-btn {
+    color: $main-white;
+    background: $base-color;
+    box-shadow: 0px 1px 30px $base-color;
+    font-family: 'Inter';
+    padding: .7rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+@mixin navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem $padding-x;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin nav_ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+// end of mixins

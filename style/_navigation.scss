@@ -1,0 +1,40 @@
+nav {
+    @include navbar;
+
+    .logo {
+        height: 3.5rem;
+    }
+
+    ul {
+        @include nav_ul;
+
+        a {
+            font-size: $regular;
+            font-weight: map-get($font-weights , big);
+            color: $main-white;
+        }
+
+        .dropdown {
+            display: flex;
+            align-items: center;
+        }
+
+        .sign-up-btn {
+            @include blue-btn;
+        }
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: none;
+
+        span {
+            display: block;
+            height: 2px;
+            width: 25px;
+            border-radius: 10px;
+            background: white;
+            margin: 5px 0;
+        }
+    }
+}
