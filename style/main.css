@@ -54,6 +54,7 @@ nav ul .sign-up-btn {
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 nav .hamburger {
   cursor: pointer;
@@ -68,6 +69,93 @@ nav .hamburger span {
   margin: 5px 0;
 }
 
+footer {
+  padding: 4rem 0 2rem 0;
+}
+footer .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 clamp(1rem, 6vw, 15rem) 2rem clamp(1rem, 6vw, 15rem);
+  border-bottom: 1px solid rgba(255, 251, 251, 0.35);
+}
+footer .flex .about {
+  flex-grow: 1;
+  flex-basis: 280px;
+}
+footer .flex .about p {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.9rem;
+  max-width: 350px;
+  margin-top: 1rem;
+}
+footer .flex .about p span {
+  color: hsl(202deg, 100%, 56%);
+}
+footer .flex .contact {
+  flex-grow: 1;
+  flex-basis: 280px;
+}
+footer .flex .contact h4 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+}
+footer .flex .contact p {
+  color: hsla(0deg, 0%, 100%, 0.8);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+footer .flex .contact a {
+  color: hsla(0deg, 0%, 100%, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+footer .follow__us {
+  flex-grow: 1;
+  flex-basis: 280px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+footer .follow__us h4 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+}
+footer .follow__us div {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+footer .follow__us select {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  border: 1px solid hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 95%);
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+footer .follow__us select option {
+  color: hsl(0deg, 0%, 95%);
+  background: black;
+}
+footer .follow__us select option:hover {
+  background: white;
+}
+footer .rights {
+  color: hsl(0deg, 100%, 99%);
+  font-size: 0.8rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+  padding: 0 1rem;
+}
+
 .home__header {
   background: url("../assets/hero-bg.png");
   position: relative;
@@ -80,9 +168,8 @@ nav .hamburger span {
 }
 .home__header .hero h1 {
   color: hsl(0deg, 0%, 100%);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 4.3vw, 3.5rem);
   max-width: 800px;
-  line-height: 5rem;
 }
 .home__header .hero h1 span {
   color: hsl(202deg, 100%, 56%);
@@ -94,6 +181,8 @@ nav .hamburger span {
 .apartment .category {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 .apartment .category div button {
   background: black;
@@ -115,7 +204,7 @@ nav .hamburger span {
   box-shadow: 0px 5px 40px #2d5981;
   border-radius: 8px;
   border: none;
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -177,7 +266,7 @@ nav .hamburger span {
   align-items: center;
   border: none;
   color: rgba(255, 251, 251, 0.65);
-  padding: 0.7rem 0.6rem;
+  padding: 0.7rem 0.3rem;
   background: hsl(0deg, 0%, 9%);
   gap: 3px;
 }
@@ -272,6 +361,7 @@ nav .hamburger span {
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
   box-shadow: 0px 4px 10px #2D5981;
   font-size: 1rem;
   margin-top: 1rem;
@@ -295,4 +385,107 @@ nav .hamburger span {
 .about__us .what-we-do p {
   max-width: 280px;
   margin: auto;
+}
+
+.dream__home {
+  color: hsl(0deg, 0%, 100%);
+  padding: 3rem clamp(1rem, 6vw, 15rem);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+}
+.dream__home div {
+  flex-grow: 1;
+  flex-basis: 350px;
+}
+.dream__home div h2 {
+  font-size: clamp(2.5rem, 4.3vw, 3.5rem);
+  margin-bottom: 1.5rem;
+}
+.dream__home div h2 span {
+  color: hsl(202deg, 100%, 56%);
+}
+.dream__home div p {
+  color: hsla(0deg, 100%, 99%, 0.65);
+  font-size: 1.5rem;
+}
+.dream__home form {
+  flex-grow: 1;
+  flex-basis: 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 580px;
+  margin: auto;
+  gap: 1rem;
+}
+.dream__home form input {
+  color: hsl(0deg, 0%, 95%);
+  font-size: 1rem;
+  flex-grow: 1;
+  flex-basis: 200px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid hsl(0deg, 0%, 95%);
+  padding: 0.6rem 0;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+.dream__home form input:focus {
+  outline: none;
+  border-bottom: 2px solid hsl(202deg, 100%, 56%);
+}
+.dream__home form select {
+  flex-grow: 1;
+  flex-basis: 200px;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  padding-bottom: 2.5px;
+  border-bottom: 1px solid hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 95%);
+  max-width: 100%;
+}
+.dream__home form select:focus {
+  outline: none;
+  border-bottom: 2px solid hsl(202deg, 100%, 56%);
+}
+.dream__home form select option {
+  color: hsl(0deg, 0%, 95%);
+  background: black;
+}
+.dream__home form select option:hover {
+  background: white;
+}
+.dream__home form textarea {
+  flex-basis: 600px;
+  flex-grow: 1;
+  font-size: 1rem;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid hsl(0deg, 0%, 95%);
+  background: transparent;
+  color: hsl(0deg, 0%, 95%);
+  padding: 0.6rem 0;
+  max-width: 100%;
+}
+.dream__home form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid hsl(202deg, 100%, 56%);
+}
+.dream__home form button {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(202deg, 100%, 56%);
+  box-shadow: 0px 1px 30px hsl(202deg, 100%, 56%);
+  font-family: "Inter";
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

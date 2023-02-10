@@ -38,3 +38,103 @@ nav {
         }
     }
 }
+
+footer {
+    padding: 4rem 0 2rem 0;
+
+    .flex {
+        @include flex;
+        flex-wrap: $flex-wrap;
+        gap: 2rem;
+        padding: 0 $padding-x 2rem $padding-x;
+        border-bottom: 1px solid rgba(255, 251, 251, 0.35);
+
+        .about {
+            flex-grow: $flex-grow-1;
+            flex-basis: 280px;
+
+            p {
+                color: $main-white;
+                font-size: $small;
+                max-width: 350px;
+                margin-top: 1rem;
+
+                span {
+                    color: $base-color;
+                }
+            }
+        }
+
+        .contact {
+            flex-grow: $flex-grow-1;
+            flex-basis: 280px;
+
+            h4 {
+                color: $main-white;
+                font-size: $big;
+            }
+
+            p {
+                color: hsla(0, 0%, 100%, 0.8);
+                font-size: $small;
+                margin-top: calc($regular * 1.5);
+            }
+
+            a {
+                color: hsla(0, 0%, 100%, 0.8);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: $small;
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    .follow__us {
+        flex-grow: $flex-grow-1;
+        flex-basis: 280px;
+        max-width: fit-content;
+
+        h4 {
+            color: $main-white;
+            font-size: $big;
+        }
+
+        div {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        select {
+            font-size: $regular;
+            background: transparent;
+            border: none;
+            border: 1px solid hsl(0, 0%, 95%);
+            color: hsla(0, 0%, 95%);
+            width: 100%;
+            border-radius: 8px;
+            padding: .5rem 1rem;
+            margin-top: 2rem;
+
+
+            option {
+                color: hsla(0, 0%, 95%);
+                background: black;
+
+                &:hover {
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .rights {
+        color: hsla(0, 100%, 99%, 1);
+        font-size: $tiny;
+        width: fit-content;
+        margin: 2rem auto 0 auto;
+        padding: 0 1rem;
+    }
+}
