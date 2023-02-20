@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: inherit;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -156,22 +157,22 @@ footer .rights {
   padding: 0 1rem;
 }
 
-.home__header {
+#home__header {
   background: url("../assets/hero-bg.png");
   position: relative;
 }
-.home__header .hero {
+#home__header .hero {
   padding: 2rem clamp(1rem, 6vw, 15rem);
   display: flex;
   align-items: center;
   height: 500px;
 }
-.home__header .hero h1 {
+#home__header .hero h1 {
   color: hsl(0deg, 0%, 100%);
   font-size: clamp(2.5rem, 4.3vw, 3.5rem);
   max-width: 800px;
 }
-.home__header .hero h1 span {
+#home__header .hero h1 span {
   color: hsl(202deg, 100%, 56%);
 }
 
@@ -488,4 +489,128 @@ footer .rights {
   cursor: pointer;
   font-size: 1rem;
   margin-top: 1.5rem;
+}
+
+.apartment-view {
+  padding: 5rem 0;
+  display: flex;
+}
+.apartment-view .apartment-preview .property {
+  display: flex;
+  justify-content: space-between;
+}
+.apartment-view .apartment-preview .property h2 {
+  color: hsl(202deg, 100%, 56%);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding: 0 clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property p {
+  color: hsla(0deg, 100%, 99%, 0.65);
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.8rem;
+  padding: 0 clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property figure {
+  padding: 0 clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property figure img {
+  width: 100%;
+}
+.apartment-view .apartment-preview .property .services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property .services ul {
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+.apartment-view .apartment-preview .property .services ul li {
+  color: hsla(0deg, 100%, 99%, 0.65);
+  font-size: 1rem;
+  margin: calc(1rem + 6px) 0;
+  display: flex;
+  align-items: center;
+}
+.apartment-view .apartment-preview .property .services ul li::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+  margin-right: 15px;
+  background: url("../assets/mark.svg") no-repeat;
+}
+.apartment-view .apartment-preview .property .video {
+  padding: 2rem clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property .video h3 {
+  color: hsl(202deg, 100%, 56%);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.apartment-view .apartment-preview .property .video img {
+  width: 100%;
+}
+.apartment-view .apartment-preview .property .map {
+  padding: 2rem clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property .map h3 {
+  color: hsl(202deg, 100%, 56%);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.apartment-view .apartment-preview .property .map img {
+  width: 100%;
+}
+.apartment-view .apartment-preview .property .listings {
+  padding: 2rem 0 2rem clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .property .listings picture {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  gap: 1.5rem;
+  padding-right: clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .user {
+  padding-right: clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .user img {
+  display: block;
+  margin: auto;
+  height: 11.2rem;
+}
+.apartment-view .apartment-preview .user h2 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.apartment-view .apartment-preview .user form {
+  margin: 2rem 0;
+}
+.apartment-view .apartment-preview .user form label {
+  color: white;
+  font-size: 0.9rem;
+  margin: 5px 0;
+  display: block;
+}
+.apartment-view .apartment-preview .user form input {
+  background: hsl(0deg, 0%, 5%);
+  border: none;
+  color: hsla(0deg, 100%, 99%, 0.65);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.apartment-view .apartment-preview .user form input:focus {
+  outline: 1px solid hsl(0deg, 0%, 5%);
 }/*# sourceMappingURL=main.css.map */
