@@ -24,7 +24,7 @@ nav {
         }
     }
 
-    .hamburger {
+    #hamburger {
         cursor: pointer;
         display: none;
 
@@ -136,5 +136,22 @@ footer {
         width: fit-content;
         margin: 2rem auto 0 auto;
         padding: 0 1rem;
+    }
+}
+
+@media (max-width: #{$tablet-width}) {
+    nav {
+        ul {
+            @include mobile_nav-links;
+        }
+
+        .active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #hamburger {
+            @include block
+        }
     }
 }

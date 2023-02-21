@@ -29,6 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem clamp(1rem, 6vw, 15rem);
+  position: relative;
 }
 nav .logo {
   height: 3.5rem;
@@ -57,11 +58,11 @@ nav ul .sign-up-btn {
   border: none;
   cursor: pointer;
 }
-nav .hamburger {
+nav #hamburger {
   cursor: pointer;
   display: none;
 }
-nav .hamburger span {
+nav #hamburger span {
   display: block;
   height: 2px;
   width: 25px;
@@ -157,6 +158,29 @@ footer .rights {
   padding: 0 1rem;
 }
 
+@media (max-width: 778px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    right: clamp(1rem, 6vw, 15rem);
+    top: 100%;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+    background: hsla(0deg, 4%, 74%, 0.1);
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav .active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  nav #hamburger {
+    display: block;
+  }
+}
 #home__header {
   background: url("../assets/hero-bg.png");
   position: relative;
@@ -492,7 +516,7 @@ footer .rights {
 }
 
 .apartment-view {
-  padding: 5rem 0;
+  padding: clamp(1rem, 6vw, 15rem) 0;
   display: flex;
 }
 .apartment-view .apartment-preview .property {
@@ -632,4 +656,22 @@ footer .rights {
   overflow-x: scroll;
   gap: 1.5rem;
   padding-right: clamp(1rem, 6vw, 15rem);
+}
+.apartment-view .apartment-preview .listings picture::-webkit-scrollbar {
+  height: 5px;
+}
+.apartment-view .apartment-preview .listings picture::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.apartment-view .apartment-preview .listings picture::-webkit-scrollbar-thumb {
+  background-color: hsl(202deg, 100%, 56%);
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+@media (max-width: 950px) {
+  .property {
+    flex-direction: column-reverse;
+  }
 }/*# sourceMappingURL=main.css.map */

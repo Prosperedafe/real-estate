@@ -60,6 +60,9 @@ $flex-wrap: wrap;
 $basis-400: 350px;
 $flex-grow-1: 1;
 $padding-x : clamp(1rem, 6vw, 15rem);
+
+//breakpionts
+$tablet-width: 778px;
 // mixins
 
 @mixin linearGradient {
@@ -90,6 +93,7 @@ $padding-x : clamp(1rem, 6vw, 15rem);
     justify-content: space-between;
     align-items: center;
     padding: .6rem $padding-x;
+    position: relative;
 }
 
 @mixin flex {
@@ -101,6 +105,25 @@ $padding-x : clamp(1rem, 6vw, 15rem);
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+@mixin mobile_nav-links {
+    flex-direction: column;
+    position: absolute;
+    right: $padding-x;
+    top: 100%;
+    align-items: flex-start;
+    padding: calc($regular * 2) calc($regular * 1.5);
+    // background: ;
+    backdrop-filter: blur(50px);
+    background: hsla(0, 4%, 74%, 0.1);
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@mixin block {
+    display: block;
 }
 
 // end of mixins
