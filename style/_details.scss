@@ -5,141 +5,179 @@
     .apartment-preview {
         .property {
             @include flex;
+            padding: 0 $padding-x;
+            gap: 2rem;
 
-            h2 {
-                color: $base-color;
-                font-size: $big;
-                margin-top: $regular;
-                padding: 0 $padding-x;
-            }
+            .wrapper {
+                flex-grow: 2;
+                flex-basis: 700px;
 
-            p {
-                color: hsla(0, 100%, 99%, 0.65);
-                font-size: $small;
-                margin: $regular 0;
-                line-height: 1.8rem;
-                padding: 0 $padding-x;
-            }
-
-            figure {
-                padding: 0 $padding-x;
-
-                img {
-                    width: 100%;
+                h2 {
+                    color: $base-color;
+                    font-size: $big;
+                    margin-top: $regular;
                 }
-            }
 
-            .services {
-                @include flex;
-                flex-wrap: $flex-wrap;
-                padding: 0 $padding-x;
+                p {
+                    color: hsla(0, 100%, 99%, 0.65);
+                    font-size: $small;
+                    margin: $regular 0;
+                    line-height: 1.8rem;
+                }
 
-                ul {
-                    width: fit-content;
-                    flex-basis: 250px;
-                    flex-grow: 1;
+                figure {
 
-                    li {
-                        color: hsla(0, 100%, 99%, 0.65);
-                        font-size: $regular;
-                        margin: calc($regular + 6px) 0;
-                        display: flex;
-                        align-items: center;
+                    img {
+                        width: 100%;
+                    }
+                }
 
-                        &::before {
-                            content: '';
-                            display: inline-block;
-                            height: 10px;
-                            width: 20px;
-                            margin-right: 15px;
-                            background: url('../assets/mark.svg') no-repeat;
+                .services {
+                    @include flex;
+                    flex-wrap: $flex-wrap;
+
+                    ul {
+                        width: fit-content;
+                        flex-basis: 250px;
+                        flex-grow: 1;
+
+                        li {
+                            color: hsla(0, 100%, 99%, 0.65);
+                            font-size: $regular;
+                            margin: calc($regular + 6px) 0;
+                            display: flex;
+                            align-items: center;
+
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                height: 10px;
+                                width: 20px;
+                                margin-right: 15px;
+                                background: url('../assets/mark.svg') no-repeat;
+                            }
                         }
                     }
                 }
+
+                .video {
+                    padding: 2rem 0;
+
+                    h3 {
+                        color: $base-color;
+                        font-size: $big;
+                        margin: $regular 0;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .map {
+                    padding: 2rem 0;
+
+                    h3 {
+                        color: $base-color;
+                        font-size: $big;
+                        margin: $regular 0;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
             }
 
-            .video {
-                padding: 2rem $padding-x;
-
-                h3 {
-                    color: $base-color;
-                    font-size: $big;
-                    margin: $regular 0;
-                }
+            & .user {
+                flex-grow: 1;
+                flex-basis: 200px;
+                max-width: 500px;
+                margin: 0 auto;
 
                 img {
-                    width: 100%;
-                }
-            }
-
-            .map {
-                padding: 2rem $padding-x;
-
-                h3 {
-                    color: $base-color;
-                    font-size: $big;
-                    margin: $regular 0;
-                }
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .listings {
-                padding: 2rem 0 2rem $padding-x;
-
-                picture {
-                    @include flex;
-                    overflow-x: scroll;
-                    gap: $big;
-                    padding-right: $padding-x;
-                }
-            }
-        }
-
-        & .user {
-            padding-right: $padding-x;
-
-            img {
-                display: block;
-                margin: auto;
-                height: 11.2rem;
-            }
-
-            h2 {
-                color: white;
-                font-size: 1.2rem;
-                text-align: center;
-            }
-
-            form {
-                margin: 2rem 0;
-
-                label {
-                    color: white;
-                    font-size: $small;
-                    margin: 5px 0;
-                    display: block;
-                }
-
-                input {
-                    background: hsl(0, 0%, 5%);
-                    border: none;
-                    color: hsla(0, 100%, 99%, 0.65);
-                    font-size: $small;
-                    font-weight: map-get($font-weights , big);
-                    padding: .5rem 1rem;
-                    border-radius: 5px;
                     display: block;
                     margin: auto;
-                    width: 100%;
+                    height: 11.2rem;
+                }
 
-                    &:focus {
-                        outline: 1px solid hsl(0, 0%, 5%);
+                h2 {
+                    color: white;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                form {
+                    margin: 2rem 0;
+
+                    label {
+                        color: white;
+                        font-size: $small;
+                        margin: 5px 0;
+                        display: block;
+                    }
+
+                    input,
+                    textarea {
+                        background: hsl(0, 0%, 5%);
+                        border: none;
+                        color: hsla(0, 100%, 99%, 0.65);
+                        font-size: $small;
+                        font-weight: map-get($font-weights , big);
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+                        display: block;
+                        margin: auto;
+                        width: 100%;
+                        resize: none;
+
+                        &:focus {
+                            outline: 1px solid hsl(0, 0%, 5%);
+                        }
+                    }
+
+                    button {
+                        background: $base-color;
+                        box-shadow: 0px 5px 40px #2D5981;
+                        border-radius: 8px;
+                        color: $main-white;
+                        font-size: $small;
+                        font-weight: map-get($font-weights , big);
+                        border: none;
+                        padding: .7rem 1rem;
+                        margin: calc($regular * 2) auto;
+                        width: 100%;
+                        display: block;
                     }
                 }
             }
         }
+
+        .listings {
+            padding: 2rem 0 2rem $padding-x;
+
+            picture {
+                @include flex;
+                overflow-x: scroll;
+                gap: $big;
+                padding-right: $padding-x;
+
+                // &::-webkit-scrollbar {
+                //     width: 1em;
+                // }
+
+                // &::-webkit-scrollbar-track {
+                //     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                // }
+
+                // &::-webkit-scrollbar-thumb {
+                //     background-color: $base-color;
+                //     outline: 1px solid slategrey;
+                //     height: 2px;
+                // }
+            }
+        }
+
     }
+
 }
